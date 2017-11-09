@@ -1,1 +1,80 @@
-Leviosá
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Tippe Top Physics</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body onresize="rearrangeTeam()">
+
+  <!-- NAVBAR, BARRA DE NAVEGACIÓ -->
+  <div class="tab">
+    <button onclick="goTo(event,'http://videos.tippetop.es')" class="tablinks">YouTube</button>
+    <button class="tablinks">Twitter</button>
+    <button class="tablinks">Facebook</button>
+    <button onclick="goTo(event,'http://tienda.tippetop.es')" class="tablinks">Tienda</button>
+    <button class="tablinks" onclick="openTab(event, 'Proyectos')">Proyectos</button>
+    <button class="tablinks" onclick="openTab(event, 'Equipo')">Equipo</button>
+    <button class="tablinks" onclick="openTab(event, 'Inicio')" id="defaultOpen">Inicio</button>
+  </div>
+
+  <!-- PESTANYA D'INICI -->
+  <div id="Inicio" class="tabcontent">
+    <h3>Inicio</h3>
+    <p>London is the capital city of England.</p>
+  </div>
+
+  <!-- QUI SOM -->
+  <div id="Equipo" class="tabcontent">
+    <!-- MIRIAM CANTOS -->
+    <div class="miembro" style="background-color: red">
+      <h1>Miriam Cantos</h1>
+      <div class="desc">
+        <p>
+          Escribe guiones y se dedica a mantenernos con los pies en el suelo. Se graduó en Física en la Universitat de València y actualmente está haciendo un máster en Meteorología en la Universidad Complutense de Madrid.
+        </p>
+      </div>
+    </div>
+
+    <!-- JOSEP GALLEGO -->
+    <div class="miembro" style="background-color: blue">
+      <h1>Josep Gallego</h1>
+      <div class="desc">
+        <p>
+          Ayuda a grabar, edita vídeos y canta. Mucho. Se graduó en Física en la UV, tiene un Máster en Educación Secundaria por el CEU y ahora está cursando un máster en Mecatrónica en la UPV.
+        </p>
+      </div>
+    </div>
+
+    <!-- ARCADI GARCIA -->
+    <div class="miembro" style="background-color: yellow">
+      <h1>Arcadi Garcia</h1>
+      <div class="desc">
+        <p>
+          Hace muy mucho el payaso. Presenta, escribe, edita, anima y se vicia mucho al Twitter. Se graduó en Física en la UV, tiene un Máster en Nuevas Tecnologías Electrónicas y Fotónicas por la UCM y está doctorándose en óptica en la UV. También traduce para MinutoDeFísica y MinutoDeLaTierra e ilustra para MinuteEarth.
+        </p>
+      </div>
+    </div>
+
+    <!-- ANDREA NEGRE -->
+    <div class="miembro" style="background-color: green">
+      <h1>Andrea Negre</h1>
+      <div class="desc">
+        <p>
+          Ayuda a grabar y a escribir guiones. Se está graduando en Física en la UV y por favor háblanos que ens tens preocupats :(
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOTS ELS NOSTRES VÍDEOS -->
+  <div id="Proyectos" class="tabcontent">
+    <h3>Vídeos</h3>
+    <p>Tots els vídeos que hem fet fins ara.</p>
+  </div>
+
+  <script src="tabs.js"></script>
+  <script src="team.js"></script>
+</body>
+</html>
