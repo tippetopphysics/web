@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tippe Top Physics | Gente</title>
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="nav.css" />
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <meta charset="utf-8">
+</head>
+<body>
+
+  <!--Navigation bar-->
+  <div id="navbar">
+  </div>
+
+  <script>
+  $(function(){
+    $("#navbar").load("nav.html", function(){
+      $(".gente").attr("id","active");
+      $("#cont").css({top: $("#navul").css("height")});
+    });
+  });
+  </script>
+  <!--end of Navigation bar-->
+
+<div id="cont">
+  <!-- MIRIAM CANTOS -->
+  <div class="miembro">
+    <h1>Miriam Cantos</h1>
+    <div class="desc">
+      <p>
+        Escribe guiones y se dedica a mantenernos con los pies en el suelo. Se graduó en Física en la Universitat de València y actualmente está haciendo un máster en Meteorología en la Universidad Complutense de Madrid.
+      </p>
+    </div>
+  </div>
+
+  <!-- JOSEP GALLEGO -->
+  <div class="miembro">
+    <h1>Josep Gallego</h1>
+    <div class="desc">
+      <p>
+        Ayuda a grabar, edita vídeos y canta. Mucho. Se graduó en Física en la UV, tiene un Máster en Educación Secundaria por el CEU y ahora está cursando un máster en Mecatrónica en la UPV.
+      </p>
+    </div>
+  </div>
+
+  <!-- ARCADI GARCIA -->
+  <div class="miembro">
+    <h1>Arcadi Garcia</h1>
+    <div class="desc">
+      <p>
+        Hace muy mucho el payaso. Presenta, escribe, edita, anima y se vicia mucho al Twitter. Se graduó en Física en la UV, tiene un Máster en Nuevas Tecnologías Electrónicas y Fotónicas por la UCM y está doctorándose en óptica en la UV. También traduce para MinutoDeFísica y MinutoDeLaTierra e ilustra para MinuteEarth.
+      </p>
+    </div>
+  </div>
+
+  <!-- ANDREA NEGRE -->
+  <div class="miembro">
+    <h1>Andrea Negre</h1>
+    <div class="desc">
+      <p>
+        Ayuda a grabar y a escribir guiones. Se está graduando en Física en la UV y por favor háblanos que ens tens preocupats :(
+      </p>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
