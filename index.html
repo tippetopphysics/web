@@ -17,8 +17,7 @@
   <script>
   $(function(){
     $("#navbar").load("nav.html", function(){
-      $(".inicio").attr("id","active");
-      $("#cont").css({top: $("#navul").css("height")});
+      responsiveNavbar();
     });
   });
   </script>
@@ -26,5 +25,6 @@
   <div id="cont">
       <p>Me huele el coño un poco a salmonete ÁÀaáà.</p>
   </div>
+  <script src="navbar.js"></script>
 </body>
 </html>
