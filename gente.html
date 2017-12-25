@@ -5,8 +5,14 @@
   <title>Tippe Top Physics | Gente</title>
   <link rel="stylesheet" href="main.css" />
   <link rel="stylesheet" href="nav.css" />
+  <link rel="stylesheet" href="gente.css" />
+  <link rel="stylesheet" href="pipolcolors.css" />
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="scrolls/jquery.mCustomScrollbar.css" />
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,400i,700" rel="stylesheet">
 </head>
 <body>
 
@@ -20,62 +26,98 @@
       $(".gente").attr("id","active");
       responsiveNavbar();
     });
+    $("#end").load("end.html");
   });
   </script>
   <!--end of Navigation bar-->
 
 <div id="cont">
-  <!-- MIRIAM CANTOS -->
-  <div class="miembro">
-    <h1>Miriam Cantos</h1>
-    <div class="desc">
-      <p>
-        Escribe guiones y se dedica a mantenernos con los pies en el suelo. Se graduó en Física en la Universitat de València y actualmente está haciendo un máster en Meteorología en la Universidad Complutense de Madrid.
-      </p>
-    </div>
+  <div class="placeholder banner" style="height: 300px">
+    <p> ací va una fotoooo </p>
   </div>
 
-  <!-- JOSEP GALLEGO -->
-  <div class="miembro">
-    <h1>Josep Gallego</h1>
-    <div class="desc">
-      <p>
-        Ayuda a grabar, edita vídeos y canta. Mucho. Se graduó en Física en la UV, tiene un Máster en Educación Secundaria por el CEU y ahora está cursando un máster en Mecatrónica en la UPV.
-      </p>
+  <div class="restus">
+    <h1>¿Quiénes sois y qué hacéis en mi casa?</h1>
+    <p> ¡Relax, relax! No hay de qué asustarse: vayamos respondiendo esas preguntas una a una, pasito a pasito, suave suavesito.</p>
+
+    <p> <b>1.</b> Tippe Top Physics somos un grupo diverso de personas <s>mazo sexis</s> apasionadas por la ciencia, ¡con un montón de ganas de <s>darte la turra al respecto</s> hacerte llegar ese amor por la cencia!</p>
+
+    <p> <b>2.</b> Necesitamos comer, y tú tienes un aspecto <i>delicioso</i>.</p>
+
+    <p> Pero en fin, mejor que ir identificándonos así en plan grupo abstracto, ¿qué tal si nos presentamos une a une? :D </p>
+    <div id="members" class="mCustomScrollbar" data-mcs-theme="rounded-dots-dark" data-mcs-axis="x">
+      <!-- MIRIAM CANTOS -->
+      <div class="miembro" id="mimi">
+        <h1>Miriam Cantos</h1>
+        <h2><span class="fa fa-map-marker" style="margin-right: 0.1em"></span> Madrid</h2>
+        <h2><a href="https://twitter.com/Miri_Xan" target="_blank"><span class="fa fa-twitter"></span> @Miri_Xan</a></h2>
+        <div class="desc">
+          <p>
+            Escribo guiones y me dedico básicamente a mantener a esta gente con los pies en el suelo. Me gradué en Física en la Universitat de València y actualmente estoy haciendo un máster en Meteorología en la Universidad Complutense de Madrid.
+          </p>
+        </div>
+      </div>
+
+      <!-- JOSEP GALLEGO -->
+      <div class="miembro" id="jojo">
+        <h1>Josep Gallego</h1>
+        <h2><span class="fa fa-map-marker" style="margin-right: 0.1em"></span> Valencia</h2>
+        <h2><a href="https://twitter.com/aimapepinillo" target="_blank"><span class="fa fa-twitter"></span> @aimapepinillo</a></h2>
+        <div class="desc">
+          <p>
+            Ayudo a grabar, edito vídeos y canto. Muuuucho. Me gradué en Física en la Universitat de València, tengo un Máster en Educación Secundaria por el CEU y ahora estoy cursando un máster en Mecatrónica en la Universitat Politècnica de València.
+          </p>
+        </div>
+      </div>
+
+      <!-- ARCADI GARCIA -->
+      <div class="miembro" id="arcadi">
+        <h1>Arcadi Garcia</h1>
+        <h2><span class="fa fa-map-marker" style="margin-right: 0.1em"></span> Valencia</h2>
+        <h2><a href="https://twitter.com/garirius" target="_blank"><span class="fa fa-twitter"></span> @garirius</a></h2>
+        <div class="desc">
+          <p>
+            Presento, escribo, animo y hago memes en Twitter y el payaso en general. Me gradué en Física en la Universitat de València, tengo un Máster en Nuevas Tecnologías Electrónicas y Fotónicas por la Universidad Complutense de Madrid y me estoy doctorando en el lab de Imagen 3D de la UV. También traduzco para MinutoDeCiencia e ilustro para MinuteEarth.
+          </p>
+        </div>
+      </div>
+
+      <!-- ANDREA NEGRE -->
+      <div class="miembro" id="andrea">
+        <h1>Andrea Negre</h1>
+        <h2><span class="fa fa-map-marker" style="margin-right: 0.1em"></span> Castellón</h2>
+        <h2><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><span class="fa fa-twitter"></span> @totalmentereal</a></h2>
+        <div class="desc">
+          <p>
+            wingardium leviosáaaaaa
+            stop it ronnn
+          </p>
+        </div>
+      </div>
+
+      <!-- PATRI AZOR -->
+      <div class="miembro" id="patri">
+        <h1>Patricia Azor</h1>
+        <h2><span class="fa fa-map-marker" style="margin-right: 0.1em"></span> Valencia</h2>
+        <h2><a href="https://twitter.com/EnVespa" target="_blank"><span class="fa fa-twitter"></span> @EnVespa</a></h2>
+        <div class="desc">
+          <p>
+            Soy muy organizada y disciplinada. Me gradué en Comunicación Audiovisual en la Universitat Jaume I. El pussy me huele a L'Oréal París.
+          </p>
+        </div>
+      </div>
     </div>
+
+    <h1>¡Qué guay suena todo! ¿Puedo unirme?</h1>
+    <p>¡Sorry, pero de momento estamos bien siendo los que somos! Pero oye, ¿quién sabe? Quizás pronto haya dinero, y sobre todo, proyectos, y quizás en esos proyectos hagas falta tú :P <s>Además tú ahora mismo formas parte del menú kolega</s></p>
   </div>
 
-  <!-- ARCADI GARCIA -->
-  <div class="miembro">
-    <h1>Arcadi Garcia</h1>
-    <div class="desc">
-      <p>
-        Hace muy mucho el payaso. Presenta, escribe, edita, anima y se vicia mucho al Twitter. Se graduó en Física en la UV, tiene un Máster en Nuevas Tecnologías Electrónicas y Fotónicas por la UCM y está doctorándose en óptica en la UV. También traduce para MinutoDeFísica y MinutoDeLaTierra e ilustra para MinuteEarth.
-      </p>
-    </div>
-  </div>
-
-  <!-- ANDREA NEGRE -->
-  <div class="miembro">
-    <h1>Andrea Negre</h1>
-    <div class="desc">
-      <p>
-        Ayuda a grabar y a escribir guiones. Se está graduando en Física en la UV y por favor háblanos que ens tens preocupats :(
-      </p>
-    </div>
-  </div>
-
-  <!-- PATRI AZOR -->
-  <div class="miembro">
-    <h1>Patricia Azor</h1>
-    <div class="desc">
-      <p>
-        Es muy organizada y disciplinada. Comunicadora Audiovisual.
-      </p>
-    </div>
-  </div>
 
 </div>
+<footer id="end">
+</footer>
+<script src="scrolls/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="navbar.js"></script>
+<script src="gente.js"></script>
 </body>
 </html>

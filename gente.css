@@ -1,0 +1,107 @@
+.miembro {
+  background-color: #eaeaea;
+  z-index: -1;
+  display: inline-block;
+  white-space: normal;
+  vertical-align: top;
+
+  width: 450px;
+  height: 900px;
+  padding: 10px;
+
+  margin: 0.5vw;
+  border-radius: 0.5vw;
+  box-shadow: 0px 7px 16px rgba(50,50,50,0.5);
+}
+
+.miembro h1{
+  font-family: "Open Sans", sans-serif;
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 0px;
+  color: #323232;
+  font-weight: 700;
+}
+
+.miembro h2{
+  font-family: "Open Sans", sans-serif;
+  font-size: 2em;
+  color: #505050;
+  text-align: center;
+  margin: 0px;
+  font-weight: 400;
+  margin-bottom: 3vh;
+  margin-top: 0px;
+}
+
+.miembro h2:first-of-type{
+  margin-bottom: 1vh;
+}
+
+.desc {
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+  background: rgba(0,0,0,0.3);
+  padding: 15px 20px;
+}
+
+.desc p{
+  text-align: justify;
+  margin: 0px;
+  text-indent: 2em;
+}
+
+#members {
+  white-space: nowrap;
+  overflow-x: auto; /* <-- show horizontal scrollbar */
+  overflow-y:hidden; /* <-- hide vertical scrollbar */
+  box-shadow: 0px 7px 16px rgba(50,50,50,0.3) inset;
+}
+
+#mCSB_1_container {
+  padding-top: 0.5vw;
+  padding-bottom: 1vw;
+}
+
+/* ICONOS */
+.miembro h2 span{
+  margin-left: 0px;
+  margin-right: 0.1em;
+}
+.miembro h2 a{
+  text-decoration: none;
+}
+
+/* COLORS DE LA PENYA */
+:root {
+    --mimi-bg: OliveDrab;
+    --mimi-bg2: rgba(232,252,207,0.5);
+    --mimi-text1: #3d0814;
+    --mimi-text2: #134611;
+    --mimi-text3: #3d0814;
+
+    --jojo-bg: LightSkyBlue;
+    --jojo-bg2: rgba(47,19,30,0.5);
+    --jojo-text1: #fcecc9;
+    --jojo-text2: #372554;
+    --jojo-text3: #fcecc9;
+
+    --andrea-bg: #EAEAEA;
+    --andrea-bg2: #ffffff;
+    --andrea-text1: #000000;
+    --andrea-text2: #323232;
+    --andrea-text3: #000000;
+
+    --arcadi-bg: white;
+    --arcadi-bg2: rgba(0,56,168,0.5);
+    --arcadi-text1: #FF004E;
+    --arcadi-text2: #734F96;
+    --arcadi-text3: white;
+
+    --patri-bg: orange;
+    --patri-bg2: rgba(255,255,255,0.5);
+    --patri-text1: #503232;
+    --patri-text2: #ffffff;
+    --patri-text3: #000000;
+}

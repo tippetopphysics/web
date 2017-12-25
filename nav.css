@@ -19,6 +19,9 @@ li a, .dropbtn {
     text-align: center;
     padding: 10px 10px;
     text-decoration: none;
+    font-size: 18pt;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 700;
 }
 
 li a:hover, .dropdown:hover .dropbtn {
@@ -28,6 +31,8 @@ li a:hover, .dropdown:hover .dropbtn {
 #active a, #active .dropdown:hover .dropbtn {
   background-color: green;
 }
+
+/* TEMA DROPDOWN */
 
 li.dropdown {
     display: inline-block;
@@ -44,7 +49,8 @@ li.dropdown {
 }
 
 .dropdown-content a {
-    color: black;
+    font-size: 14pt;
+    color: #505050;
     padding: 10px 10px;
     text-decoration: none;
     display: block;
@@ -53,8 +59,34 @@ li.dropdown {
 
 .dropdown-content a:hover {background-color: #f1f1f1}
 
+#youtube:hover {
+  color: white;
+  background-color: #cc181e;
+}
+
+#facebook:hover {
+  color: white;
+  background-color: #3b5998;
+}
+
+#twitter:hover {
+  color: white;
+  background-color: #00aced;
+}
+
+#emilio:hover {
+  color: #f9f9f9;
+  background-color: #505050;
+}
+
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.dropdown-content .material-icons {
+  font-size: 14pt;
+  position: relative;
+  top: 2pt;
 }
 
 #righto{

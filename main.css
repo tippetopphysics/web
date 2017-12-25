@@ -1,16 +1,84 @@
-body {
+html, body {
+  padding: 0px;
+  margin: 0px;
+  width: 100vw;
+  overflow-x: hidden;
+}
+#navbar, #navul {
+  z-index: 5;
+  box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.6);
+  margin: 0px;
+  padding: 0px;
+}
+#cont {
+  position: relative;
+  z-index: 0;
+  padding: 0px;
+  margin: 0px;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.banner {
+  width: 100%;
+}
+
+.placeholder{
+  background-color: #dd5588;
   margin: 0px;
 }
 
-#navbar {
-  z-index: 3;
-}
-
-#cont {
+.placeholder p{
   position: relative;
-  z-index: 1;
+  top: 50%;
+  left: 50%;
+  font-size: 20pt;
+  color: #0032dd
 }
 
-.miembro {
-  background-color: #eaeaea;
+#cont p{
+  font-family: "Open Sans", sans-serif;
+  color: #323232;
+  font-size: 1.2em;
+}
+
+.restus {
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+.restus h1 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 700;
+  color: #323232;
+  font-size: 3em;
+}
+
+.restus p{
+  text-indent: 2em;
+  text-align: justify;
+}
+
+/* PEU DE PÀGINA*/
+
+#end{
+  bottom: 0px;
+  margin: auto;
+  margin-top: 5vh;
+  margin-bottom: 0px;
+}
+
+#end p{
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #505050;
+  margin-bottom: 0px;
+  margin-top: 5vh;
+}
+
+/* ICONOS */
+span {
+  margin-left: 0.25em;
+  margin-right: 0.5em;
 }
