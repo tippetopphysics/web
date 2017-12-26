@@ -28,8 +28,10 @@ li a:hover, .dropdown:hover .dropbtn {
     background-color: red;
 }
 
-#active a, #active .dropdown:hover .dropbtn {
+#active > a, #active .dropdown:hover .dropbtn {
   background-color: green;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
 }
 
 /* TEMA DROPDOWN */

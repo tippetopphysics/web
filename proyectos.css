@@ -1,0 +1,73 @@
+.restus button{
+  margin-left: 2em;
+  font-size: 2em;
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #323232;
+}
+
+.latabla{
+  display: block;
+  width: 100%;
+}
+
+.tablement {
+  background-color: white;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+  padding: 0px;
+  margin: 1vw;
+  float: left;
+  display: block;
+}
+
+.tablement .placeholder{
+  width: 100%;
+  margin: 0px;
+  height: 200px;
+}
+
+.tablement:hover, #prox:hover{
+  background-color: #fafafa;
+  box-shadow: 7px 7px 16px rgba(0,0,0,0.3);
+}
+
+.tablement .desc{
+  padding: 10px 20px;
+}
+
+.tablement h2{
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 700;
+  color: #323232;
+  font-size: 2em;
+}
+
+.tablement a{
+  text-decoration: none;
+}
+
+#prox{
+  background-color: #dadada;
+  padding: 0px;
+}
+
+#prox .desc{
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  top: 25%;
+}
+
+#prox h2{
+  color: #323232;
+  font-size: 3em;
+  text-align: center;
+}
+
+#prox span{
+  position: relative;
+  left: 0.9em;
+  color: #323232;
+  font-size: 10em;
+  margin: 0px;
+}

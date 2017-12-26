@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tippe Top Physics | Gente</title>
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="nav.css" />
+  <link rel="stylesheet" href="proyectos.css" />
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="scrolls/jquery.mCustomScrollbar.css" />
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,400i,700" rel="stylesheet">
+</head>
+<body onresize="responsiveProjects()">
+
+  <!--Navigation bar-->
+  <div id="navbar">
+  </div>
+
+  <script>
+  $(function(){
+    $("#navbar").load("nav.html", function(){
+      $(".proyectos").attr("id","active");
+      responsiveNavbar();
+    });
+    $("#end").load("end.html");
+  });
+  </script>
+  <!--end of Navigation bar-->
+
+<div id="cont">
+  <div class="placeholder banner" style="height: 300px">
+    <p> ací va una fotoooo </p>
+  </div>
+
+  <div class="restus">
+    <h1>¿Pero qué es lo que hacéis en concreto?</h1>
+    <p> ¡Pues te sorprendería, pero hacemos mazo de cosas! Que no te engañen nuestras jóvenes caras ni nuestra tontería conjunta: tenemos un montón de proyectos en marcha. Como muestra, un botón. </p>
+    <button onclick="alert('Pum!! Toma proyectooooo')">Hola, soy un botón</button>
+    <p>Y ahora ya más en serio: ¡mira en qué cosillas participamos!</p>
+    <div class="latabla">
+      <div class="tablement"><a href="tippetop.html">
+        <div class="placeholder"></div>
+        <div class="desc">
+          <h2>Tippe Top Physics</h2>
+          <p>
+            Mira la que se avecina a la vuelta de la esquina viene diego rumbeando. Con la luna en sus pupilas y su traje aguamarina van restos de contrabando y donde más no cabe un alma allí se mete a darse caña poseído por el ritmo ragatanga. Y el dijéi que lo conoce toca el
+          </p>
+        </div></a>
+      </div>
+      <div class="tablement"><a href="gastrofisica.html">
+        <div class="placeholder"></div>
+        <div class="desc">
+          <h2>GASTROFÍSICA</h2>
+          <p>
+            La Física de la Cocina.
+          </p>
+        </div></a>
+      </div>
+      <div class="tablement"><a href="colabos.html">
+        <div class="placeholder"></div>
+        <div class="desc">
+          <h2>Colaboraciones y demás</h2>
+          <p>
+            ¡Somos youtubers! ¡Hacemos colabos! ¡Nos hacen entrevistas!
+          </p>
+        </div></a>
+      </div>
+      <div class="tablement" id="prox"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+        <div class="desc">
+          <span class="fa fa-cog fa-spin fa-5x"></span>
+          <h2>
+            Próximamente...
+          </h2>
+        </div></a>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<footer id="end">
+</footer>
+<script src="proyectos.js"></script>
+<script src="navbar.js"></script>
+</body>
+</html>
