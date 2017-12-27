@@ -36,10 +36,25 @@ html, body {
   color: #0032dd
 }
 
-#cont p, #cont li, #cont li li{
+#cont p{
   font-family: "Open Sans", sans-serif;
   color: #323232;
-  font-size: 1.2em;
+  font-size: 1em;
+}
+
+#cont ul {
+  list-style:circle;
+  width: 50%;
+  position: relative;
+  display:
+}
+
+#cont li{
+  font-family: "Open Sans", sans-serif;
+  color: #323232;
+  font-size: 1em;
+  float: left;
+  display: list-item;
 }
 
 #cont li:hover{

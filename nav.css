@@ -9,11 +9,11 @@
     float:right;
 }
 
-#navbar li {
+li {
     float: right;
 }
 
-#navbar li a, .dropbtn {
+li a, .dropbtn {
     display: inline-block;
     color: white;
     text-align: center;
@@ -24,7 +24,7 @@
     font-weight: 700;
 }
 
-#navbar li a:hover, .dropdown:hover .dropbtn {
+li a:hover, .dropdown:hover .dropbtn {
     background-color: red;
 }
 
