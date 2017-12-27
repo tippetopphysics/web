@@ -24,7 +24,7 @@ function responsiveProjects(){
     //obtenim els N divs de la fila
     var extremis = Math.min(i+n,proyes.length);
     var fila = proyes.slice(i,extremis);
-    var maxis = 0;
+    var maxis = 490;
     for(var j=0; j<fila.length; j++){
       var elem = fila.eq(j);
       if(elem.height()>maxis){
@@ -36,6 +36,14 @@ function responsiveProjects(){
       elem.css({"height": maxis + "px"});
     }
   }
+
+  //Ja que estem, reposicionem l'engranatge del próximamente:
+  var wid = $("#prox span").width();
+  wid = (w0-wid)/2;
+  $("#prox span").css({
+    "margin-left": wid + "px",
+    "margin-right": wid + "px"
+  });
 }
 
 responsiveProjects();

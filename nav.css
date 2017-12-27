@@ -1,4 +1,4 @@
-ul {
+#navbar ul {
     list-style-type: none;
     padding: 0px;
     margin: 0px;
@@ -9,11 +9,11 @@ ul {
     float:right;
 }
 
-li {
+#navbar li {
     float: right;
 }
 
-li a, .dropbtn {
+#navbar li a, .dropbtn {
     display: inline-block;
     color: white;
     text-align: center;
@@ -24,7 +24,7 @@ li a, .dropbtn {
     font-weight: 700;
 }
 
-li a:hover, .dropdown:hover .dropbtn {
+#navbar li a:hover, .dropdown:hover .dropbtn {
     background-color: red;
 }
 

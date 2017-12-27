@@ -41,6 +41,13 @@ function ProjectElement(name,tipo,id,desc,extra,banner){
         var repro = $(this.extra.clico);
         res.append(repro);
         break;
+      case "eitb":
+        w = 70;
+        h = (44/70.0)*w;
+        res.css({"width": w +"vw","height": h +"vw"});
+        var repro = $(this.extra.clico);
+        res.append(repro);
+        break;
       default:
         res.css({"background-color": "white","padding-left": "2vw",
           "padding-right": "2vw","padding-top": "2vw","padding-bottom": "2vw",});
@@ -75,7 +82,8 @@ function ProjectElement(name,tipo,id,desc,extra,banner){
           break;
         default:
           baneo = $("<img class='projban'>");
-          baneo.attr("src","imgs/placeholder.png");
+          baneo.attr({"src": "imgs/placeholder.png",
+          "width": "100%"});
       }
     } else {
       baneo = $("<img class='projban'>");
@@ -166,21 +174,30 @@ function loadProjects(pagina){
               new ProjectElement("Órbita Laika 46: Sara Escudero - Orden",
               "tve","www.rtve.es/alacarta/videos/orbita-laika/orbita-laika-sara-escudero-orden/4361638/",
               "¡Nuestro Arcadi sale en un programa de Órbita Laika! ¡En la tele! Sólo cinco minutitos, ¡pero qué cinco minutitos!",
-
               {"disp": "pano",
               "clico": '<div style="width:100%;padding-top:64%;position:relative;border-bottom:1px solid #aaa;display:inline-block;background:none;"><iframe frameborder="0" src="http://www.rtve.es/drmn/embed/video/4361638" name="Programa 9: Sara Escudero - Orden" scrolling="no" style="width:100%;height:100%;position:absolute;left:0;top:0;overflow:hidden;" allowfullscreen></iframe> </div>'}),
+
               new ProjectElement("Órbita Laika - Science Truck con Sarah Nichols",
               "youtube","oXzUwhBpsG8",
               "La entrevista completa que le hizo la siempre espléndida Sarah Nichols a nuestro Arcadi en Órbita Laika. ¡20 minutos de CENCIA y tonterías!",
               {"disp": "pano"}),
+
               new ProjectElement("PIMPCIPIO INACTIVO - #homeopatia",
               "youtube","mlvj7C9f-Ls",
               "El MARAVILLOSO Y SEXI <a href='https://www.youtube.com/channel/UCd3RNj3Rb6hpVDbG_L9YZ3g' target='_blank'>El Físico Barbudo</a> ha creado esta MASTERPIS de trap homeopático, con el cameo de gente EXTUPENDA, incluyendo nuestro propio Arcadi.",
               {"disp": "pano"}),
+
+              new ProjectElement("Scenio Bilbao 2017: Sesión Youtuber",
+              "eitb","notengojajajaja",
+              "Scenio Bilbao 2017 fue el primer gran evento de nuevos formatos divulgativos en español, y nuestro Arcadi fue a representar a Tippe Top participando en un par de actividades en la sesión youtuber. ¡A disfrutar!",
+              {"disp": "pano",
+                "clico": '<iframe style="width:100%;height:100%" scrolling="no" src="http://www.eitb.eus/es/get/multimedia/screenview/id/5086550/tipo/videos/" frameBorder="0" allowfullscreen></iframe>'}),
+
               new ProjectElement("¿Sabes más Física que un estudiante de MIR? feat. Psiqetal",
               "youtube","IuvYUPqAm5Q",
               "Tras el test al que Dani Orts (<a href='https://www.youtube.com/channel/UCbEAy9mnH2YReAHR0SLdJ0Q' target='_blank'>Psiquiatría et al.</a>) sometió a Arcadi en su canal, tocaba reciprocar, y sometimos a Dani a nuestro propio test físico para comprobar cuánto sabía de Física.",
               {"disp": "pano"}),
+
               new ProjectElement("¡Test Cruzado! ¿Cuánto sabe de Psiquiatría un Físico? ft. Arcadi",
               "youtube","XWJz3fDWyUg",
               "Nuestro Arcadi se somete a un test para comprobar cuánto sabe de Psiquiatría en el canal <a href='https://www.youtube.com/channel/UCbEAy9mnH2YReAHR0SLdJ0Q' target='_blank'>Psiquiatría et al.</a>, con <s>eróticos</s> sorprendentes resultados.",

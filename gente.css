@@ -5,8 +5,8 @@
   white-space: normal;
   vertical-align: top;
 
-  width: 450px;
-  height: 900px;
+  width: 400px;
+  height: 800px;
   padding: 10px;
 
   margin: 0.5vw;
@@ -21,6 +21,7 @@
   margin-bottom: 0px;
   color: #323232;
   font-weight: 700;
+  margin-top: 20px;
 }
 
 .miembro h2{
@@ -57,6 +58,7 @@
   overflow-x: auto; /* <-- show horizontal scrollbar */
   overflow-y:hidden; /* <-- hide vertical scrollbar */
   box-shadow: 0px 7px 16px rgba(50,50,50,0.3) inset;
+  margin-top: 0px;
 }
 
 #mCSB_1_container {
@@ -87,11 +89,11 @@
     --jojo-text2: #372554;
     --jojo-text3: #fcecc9;
 
-    --andrea-bg: #EAEAEA;
-    --andrea-bg2: #ffffff;
-    --andrea-text1: #000000;
-    --andrea-text2: #323232;
-    --andrea-text3: #000000;
+    --andrea-bg: gold;
+    --andrea-bg2: rgba(255,255,255,0.5);
+    --andrea-text1: #ff4c00;
+    --andrea-text2: #9b2e00;
+    --andrea-text3: #24096b;
 
     --arcadi-bg: white;
     --arcadi-bg2: rgba(0,56,168,0.5);
