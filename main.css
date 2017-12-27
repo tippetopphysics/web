@@ -44,7 +44,7 @@ html, body {
 
 .restus {
   padding-left: 1vw;
-  padding-right: 1vw;
+  padding-right: 30px;
 }
 
 .restus h1 {
@@ -54,9 +54,26 @@ html, body {
   font-size: 3em;
 }
 
+.restus > h2 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 700;
+  color: #323232;
+  font-size: 2em;
+  text-indent: 0.5em;
+}
+
 .restus p{
   text-indent: 2em;
   text-align: justify;
+}
+
+.restus p > a:link, .restus p > a:visited{
+  color: #0D6F70;
+  font-weight: 700;
+}
+
+.restus a:hover{
+  color: hotpink;
 }
 
 /* PEU DE PÀGINA*/
@@ -81,4 +98,27 @@ html, body {
 span {
   margin-left: 0.25em;
   margin-right: 0.5em;
+}
+
+/* Per a les coses que fem de pop-up */
+
+.backdrop{
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  display: table;
+}
+
+#medio {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#inda {
+  margin: auto;
+  box-shadow: 0px 0px 20px black;
 }

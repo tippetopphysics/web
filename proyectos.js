@@ -11,6 +11,10 @@ function responsiveProjects(){
 
   var n = Math.round(wid/(miwi+2*mag));
   var w0 = wid/n - 2*mag;
+  if (n<1){
+    n = 1;
+    w0 = miwi;
+  }
 
   proyes = $(".tablement");
   $(".tablement").css("width",w0-10+"px");

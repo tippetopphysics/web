@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tippe Top Physics | Gente</title>
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="nav.css" />
+  <link rel="stylesheet" href="proyectos.css" />
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="scrolls/jquery.mCustomScrollbar.css" />
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,400i,700" rel="stylesheet">
+</head>
+<body onresize="responsiveProjects()">
+
+  <!--Navigation bar-->
+  <div id="navbar">
+  </div>
+
+  <script>
+  $(function(){
+    $("#navbar").load("nav.html", function(){
+      $(".proyectos").attr("id","active");
+      responsiveNavbar();
+    });
+    $("#end").load("end.html");
+  });
+  </script>
+  <!--end of Navigation bar-->
+
+<div id="cont">
+  <div class="placeholder banner" style="height: 300px">
+    <p> ací va una fotoooo </p>
+  </div>
+
+  <div class="restus">
+    <h1>Tippe Top Physics</h1>
+    <p> Tippe Top Physics empezó en 2014 como parte de un concurso de innovación educativa de la Universitat de València - ESTIC 2013/14. Supervisades por les profesores de la Facultad de Física de la UV Chantal Ferrer, Enric Valor y Toni Font, y con la ayuda del proyecto de demostraciones físicas <a href="http://fisicademos.blogs.uv.es/" target="_blank">FisicaDemos</a>, echamos adelante los primeros tres vídeos de Tippe Top: <a href="https://www.youtube.com/watch?v=OxtH4o8KlcY" target="_blank">Efecto Doppler</a>, <a href="https://www.youtube.com/watch?v=V44hpwIX8vk" target="_blank">Momento Lineal</a> y <a href="https://www.youtube.com/watch?v=VUlu2SgNYRI" target="_blank">Física de la Cocina</a>.</p>
+    <p>La idea, en su momento, era hacer material educativo que sirviese tanto para estudiantes en primeros años de carrera como para los últimos años de bachillerato. Y lo mejor de todo: ¡ganamos el concurso! ¡Qué tiempos aquellos!</p>
+    <p>
+      Ahora que existimos más como nuestra propia cosa, lo que queremos es hacer contenido que todo el mundo pueda entender, y que cualquier persona sea capaz de sentir el amor por la ciencia que sentimos nosotres.
+    </p>
+    <h2>¿Cuánto os cuesta hacer un vídeo?</h1>
+    <p> ¡Mucho! Organizar a varias personas, cada una con sus compromisos, trabajos y estudios (recordemos que esto es algo que hacemos como hobby) cuesta bastante más de lo que parece. Pero poquito a poquito los vamos sacando, no worries.</p>
+
+    <div class="latabla">
+      <div class="tablement" id="prox"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+        <div class="desc">
+          <span class="fa fa-cog fa-spin fa-5x"></span>
+          <h2>
+            Próximamente...
+          </h2>
+        </div></a>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<footer id="end">
+</footer>
+<script src="videos.js" onload="loadProjects('tippetop')"></script>
+<script src="proyectos.js"></script>
+<script src="navbar.js"></script>
+</body>
+</html>
