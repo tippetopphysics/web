@@ -1,13 +1,11 @@
-
-
 // LLISTA DE PROJECTES I TAL
-function ProjectElement(name,tipo,id,desc,extra,banner){
-  this.name = name;
-  this.tipo = tipo;
-  this.id = id;
-  this.desc = desc;
-  this.extra = extra;
-  this.banner = banner;
+function ProjectElement(proyectus){
+  this.name = proyectus.name;
+  this.tipo = proyectus.tipo;
+  this.id = proyectus.id;
+  this.desc = proyectus.desc;
+  this.extra = proyectus.extra;
+  this.banner = proyectus.banner;
 
   //Crea el div per a quan es clica en el div de la web
   this.doClicks = function() {
@@ -34,19 +32,143 @@ function ProjectElement(name,tipo,id,desc,extra,banner){
 
         res.append(repro);
         break;
+
       case "tve":
         w = 70;
         h = (9/16.0)*w;
         res.css({"width": w +"vw","height": h +"vw"});
-        var repro = $(this.extra.clico);
-        res.append(repro);
+        var daddy = $("<div style='width:100%;padding-top:64%;position:relative;border-bottom:1px solid #aaa;display:inline-block;background:none;'></div>");
+        var repro = $('<iframe></iframe>');
+        repro.attr({
+          "id": this.tipo,
+          "name": this.name,
+          "scrolling": "no",
+          "allowfullscreen": "true",
+          "src": "util/redirect.html?where="+"http://www.rtve.es/drmn/embed/video/"+ this.id,
+          "frameborder": "0"
+        });
+
+        daddy.append(repro);
+        console.log(daddy);
+        res.append(daddy);
         break;
+
       case "eitb":
         w = 70;
         h = (44/70.0)*w;
         res.css({"width": w +"vw","height": h +"vw"});
-        var repro = $(this.extra.clico);
+        var repro = $('<iframe></iframe>');
+        repro.attr({
+          "id": this.tipo,
+          "width": "100%",
+          "height": "100%",
+          "scrolling": "no",
+          "frameBorder": "0",
+          "allowfullscreen": "true",
+          "src": "util/redirect.html?"+"where=http://www.eitb.eus/es/get/multimedia/screenview/id/"+ this.id + "/tipo/videos/"
+        });
         res.append(repro);
+        break;
+
+      case "prensa":
+        w = 80;
+        h = (9/16.0)*w;
+
+        res.css({"width": w +"vw","height": h +"vw",
+          "background-color": "white", "overflow": "hidden",
+           "padding-top": "10px", "padding-bottom": "10px",
+           "padding-left": "10px","padding-right": "10px"});
+
+        res.attr("class","artikel");
+
+        //TRANSCRIPCIÓ
+          var transcript = $("<div id='transcript'></div>");
+          //afegim titular, subtítol, autor i data
+          transcript.append("<h1>"+this.extra.titular+"</h1>");
+          transcript.append("<h2>"+this.extra.subtitulo+"</h2>");
+          transcript.append("<h3>"+this.extra.rubrica+"</h3>");
+          transcript.append("<h4>"+this.extra.fecha+"</h4>");
+
+          //text complet
+          var textus = this.extra.texto.split("\n");
+          var imagos = this.extra.imatges.length;
+          var elems = 0;
+          for(i in textus){
+            if(i == elems*textus.length/imagos){
+              var nuimg = $("<div class='transcimg'></div>");
+              nuimg.append("<img src='" + this.extra.imatges[elems]+"'>");
+              nuimg.append("<p>"+this.extra.peus[elems]+"</p>");
+              elems++;
+              transcript.append(nuimg);
+            }
+            transcript.append("<p>"+textus[i]+"</p>");
+          }
+
+        //TEXT COMPLET
+        if(this.extra.showtype != "mono"){
+          var original = $("<div id='original' style='display: none'></div>");
+          var lector;
+          switch (this.extra.alternate) {
+            case "pdf":
+              lector = $("<object></object>");
+              lector.attr({
+                "width": "100%",
+                "height": "100%",
+                "type": "application/pdf",
+                "data" : this.id
+              });
+              lector.append("<p>¡Hola! Parece que no se puede mostrar el PDF original. ¿Has considerado leer la transcripción?");
+              break;
+            default:
+              lector = $("<p> Holaaaaa </p>");
+          }
+
+          original.append(lector);
+        }
+
+        switch (this.extra.showtype) {
+          case "dual":
+            //afegim el mecanisme de toggle
+            var warnung = $("<div id='warnung'></div>");
+            warnung.append("<h1>Estás leyendo una transcripción</h1>");
+            var opti = $("<h2 id='transc'>Haz clic aquí para ver el artículo original</h2>");
+
+            opti.click(function(e){
+              var target = $(event.target);
+              var divid = target.attr("id");
+              switch (divid) {
+                case "transc":
+                  $("#warnung h1").html("Estás viendo el artículo original");
+                  $("#warnung h2").html("Haz clic aquí para leer una transcripción.");
+                  $("#transc").attr("id","origin");
+                  $("#transcript").hide();
+                  $("#original").show();
+                  break;
+                case "origin":
+                  $("#warnung h1").html("Estás leyendo una transcripción");
+                  $("#warnung h2").html("Haz clic aquí para ver el artículo original.");
+                  $("#origin").attr("id","transc");
+                  $("#transcript").show();
+                  $("#original").hide();
+                  break;
+                default:
+                  console.log("¡Hola! Soy el gestor transcripción-original. Algo ha ido muuuuy muy mal.");
+              }
+            });
+
+            warnung.append(opti);
+            res.append(warnung);
+
+            transcript.css({
+              "margin-left": "10px",
+              "margin-right": "10px",
+              "box-shadow": "box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5)"
+            });
+
+            res.append(original);
+          default:
+            res.append(transcript);
+        }
         break;
       default:
         res.css({"background-color": "white","padding-left": "2vw",
@@ -96,23 +218,33 @@ function ProjectElement(name,tipo,id,desc,extra,banner){
     ladesc.append("<h2>"+this.name+"</h2>");
     ladesc.append("<p>"+this.desc+"</p>");
 
+    var barra = $("<div class='deco'></div>");
+
     ildivo.append(ladesc);
+    ildivo.append(barra);
     $(".latabla").append(ildivo);
 
     ildivo.click(function(){
       //Creem ara un div mazo gran
+      var fondo = $("<div class='fondukus'></div>");
       var backdrop = $("<div class='backdrop'></div>");
       var cosika = proyo.doClicks();
       backdrop.append(cosika);
 
-      backdrop.click(function(){
-        $(this).hide(500,function(){
-          $(this).remove();
-        });
-      });
-
-      backdrop.children().on("click",function(event){
-        event.evtStopPropagation();
+      backdrop.click(function(e){
+        var target = $(e.target);
+        var papis = target.parents();
+        var hideme = true;
+        for(i in papis){
+          if(papis.eq(i).attr("id")=="inda"){
+            hideme = false;
+          }
+        }
+        if(hideme){
+          $(this).hide(500,function(){
+            $(this).remove();
+          });
+        }
       });
       $("BODY").append(backdrop);
       backdrop.show(500);
@@ -121,94 +253,11 @@ function ProjectElement(name,tipo,id,desc,extra,banner){
 }
 
 function loadProjects(pagina){
-  var projectibus;
-  switch (pagina) {
-    case "tippetop":
-        projectibus = [
-          new ProjectElement("Errores, Eratóstenes y Viceversa",
-          "youtube","uRQ01RiKJYA",
-          "En pleno siglo XXI hay peña que todavía duda que la Tierra sea redonda. Eratóstenes lo calculó con una miaja de geometría hace 2000 años. Resumen: Eratóstenes es bastante puto amo. Además, hablamos sobre qué hacemos cuando hay errores a la hora de medir.",
-          {"disp": "pano"}),
-          new ProjectElement("ANTARES - Cazaneutrinos",
-          "youtube","PFoUF4jl07s",
-          "NEUTRINOS: ¿Qué son? ¿Por qué nos empeñamos en detectarlos? Este vídeo lo hicimos para el VI concurso de divulgación CPAN. No ganamos, pero ¿y lo bien que nos lo pasamos haciéndolo?",
-          {"disp": "pano"}),
-          new ProjectElement("<span class='fa fa-music'></span>Relatividad<span class='fa fa-music'></span>",
-          "youtube","ffX3uFBphmE",
-          "Aprovechamos el 100º aniversario de la confirmación experimental de la Relatividad General de Einstein para cantar un ratico a ritmo de La Oreja de Van Gogh, ¡y de paso explicar algo de cencia!",
-          {"disp": "pano"}),
-          new ProjectElement("Física de la Cocina",
-          "youtube","VUlu2SgNYRI",
-          "¿Cómo funciona una olla exprés? ¿Y una nevera? ¿Y un microondas? En nuestro último para el concurso ESTIC 2013/14 nos metemos en la cocina para investigar cómo funcionan esos aparatejos.",
-          {"disp": "pano"}),
-          new ProjectElement("Momento Lineal",
-          "youtube","V44hpwIX8vk",
-          "A todes nos hace mucha más gracia que nos atropelle una mosca que que nos atropelle un tren, pero ¿por qué? Pues por la conservación del momento lineal. Dedícale un momento a este vídeo y échale un vistazo.",
-          {"disp": "pano"}),
-          new ProjectElement("Efecto Doppler",
-          "youtube","OxtH4o8KlcY",
-          "¡Nuestro primer vídeo! ¡Mira que éramos jóveneees! Madre mía cómo pasa el tiempo. Te explicamos qué tienen que ver las ambulancias con la expansión del universo, y no, no es una pregunta retórica.",
-          {"disp": "pano"})
-        ];
-      break;
-
-      case "gastrofisica":
-          projectibus = [
-            new ProjectElement("La óptica de una clara de huevo",
-            "youtube","PywBvGEIa8c",
-            "La óptica mola un huevo, y los huevos hay que verlos para creerlos. En este vídeo de Gastrofísica, le echamos un vistazo a la óptica tras el punto de nieve, que no es poca.",
-            {"disp": "pano"}),
-            new ProjectElement("Baño María",
-            "youtube","ushxfqlK3WQ",
-            "¿Para qué sirve el baño María? ¿Cómo funciona? ¿Por qué se llama así? ¡Tantas preguntas y tan poco tiempo! Por suerte, las respondemos TODAS en menos de 4 minutos.",
-            {"disp": "pano"}),
-            new ProjectElement("Caramelo",
-            "youtube","J2Vkv5GQXww",
-            "¿A qué temperatura se funde el azúcar? ¿Cómo se forma el caramelo? Hay preguntas sobre este material tan delicioso que la ciencia aún es incapaz de responder. Por suerte, siempre nos lo podemos comer.",
-            {"disp": "pano"})
-          ];
-        break;
-
-        case "colabos":
-            projectibus = [
-              new ProjectElement("Órbita Laika 46: Sara Escudero - Orden",
-              "tve","www.rtve.es/alacarta/videos/orbita-laika/orbita-laika-sara-escudero-orden/4361638/",
-              "¡Nuestro Arcadi sale en un programa de Órbita Laika! ¡En la tele! Sólo cinco minutitos, ¡pero qué cinco minutitos!",
-              {"disp": "pano",
-              "clico": '<div style="width:100%;padding-top:64%;position:relative;border-bottom:1px solid #aaa;display:inline-block;background:none;"><iframe frameborder="0" src="http://www.rtve.es/drmn/embed/video/4361638" name="Programa 9: Sara Escudero - Orden" scrolling="no" style="width:100%;height:100%;position:absolute;left:0;top:0;overflow:hidden;" allowfullscreen></iframe> </div>'}),
-
-              new ProjectElement("Órbita Laika - Science Truck con Sarah Nichols",
-              "youtube","oXzUwhBpsG8",
-              "La entrevista completa que le hizo la siempre espléndida Sarah Nichols a nuestro Arcadi en Órbita Laika. ¡20 minutos de CENCIA y tonterías!",
-              {"disp": "pano"}),
-
-              new ProjectElement("PIMPCIPIO INACTIVO - #homeopatia",
-              "youtube","mlvj7C9f-Ls",
-              "El MARAVILLOSO Y SEXI <a href='https://www.youtube.com/channel/UCd3RNj3Rb6hpVDbG_L9YZ3g' target='_blank'>El Físico Barbudo</a> ha creado esta MASTERPIS de trap homeopático, con el cameo de gente EXTUPENDA, incluyendo nuestro propio Arcadi.",
-              {"disp": "pano"}),
-
-              new ProjectElement("Scenio Bilbao 2017: Sesión Youtuber",
-              "eitb","notengojajajaja",
-              "Scenio Bilbao 2017 fue el primer gran evento de nuevos formatos divulgativos en español, y nuestro Arcadi fue a representar a Tippe Top participando en un par de actividades en la sesión youtuber. ¡A disfrutar!",
-              {"disp": "pano",
-                "clico": '<iframe style="width:100%;height:100%" scrolling="no" src="http://www.eitb.eus/es/get/multimedia/screenview/id/5086550/tipo/videos/" frameBorder="0" allowfullscreen></iframe>'}),
-
-              new ProjectElement("¿Sabes más Física que un estudiante de MIR? feat. Psiqetal",
-              "youtube","IuvYUPqAm5Q",
-              "Tras el test al que Dani Orts (<a href='https://www.youtube.com/channel/UCbEAy9mnH2YReAHR0SLdJ0Q' target='_blank'>Psiquiatría et al.</a>) sometió a Arcadi en su canal, tocaba reciprocar, y sometimos a Dani a nuestro propio test físico para comprobar cuánto sabía de Física.",
-              {"disp": "pano"}),
-
-              new ProjectElement("¡Test Cruzado! ¿Cuánto sabe de Psiquiatría un Físico? ft. Arcadi",
-              "youtube","XWJz3fDWyUg",
-              "Nuestro Arcadi se somete a un test para comprobar cuánto sabe de Psiquiatría en el canal <a href='https://www.youtube.com/channel/UCbEAy9mnH2YReAHR0SLdJ0Q' target='_blank'>Psiquiatría et al.</a>, con <s>eróticos</s> sorprendentes resultados.",
-              {"disp": "pano"})
-            ];
-          break;
-    default:
-      console.log("Never gonna give you uuupppp");
-  }
-
-  for(i in projectibus){
-    projectibus[i].creaDiv();
-  }
+  $.getJSON("proyectos/"+pagina+".json", function(data){
+    for(i in data){
+      var ele = new ProjectElement(data[i]);
+      ele.creaDiv();
+    }
+    responsiveProjects();
+  });
 }

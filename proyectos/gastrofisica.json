@@ -1,0 +1,21 @@
+[
+  {
+    "name":"La óptica de una clara de huevo",
+    "tipo": "youtube",
+    "id": "PywBvGEIa8c",
+    "desc": "La óptica mola un huevo, y los huevos hay que verlos para creerlos. En este vídeo de Gastrofísica, le echamos un vistazo a la óptica tras el punto de nieve, que no es poca.",
+    "extra":{"disp": "pano"}
+  },{
+    "name":"Baño María",
+    "tipo": "youtube",
+    "id": "ushxfqlK3WQ",
+    "desc": "¿Para qué sirve el baño María? ¿Cómo funciona? ¿Por qué se llama así? ¡Tantas preguntas y tan poco tiempo! Por suerte, las respondemos TODAS en menos de 4 minutos.",
+    "extra":{"disp": "pano"}
+    },{
+    "name":"Caramelo",
+    "tipo": "youtube",
+    "id": "J2Vkv5GQXww",
+    "desc": "¿A qué temperatura se funde el azúcar? ¿Cómo se forma el caramelo? Hay preguntas sobre este material tan delicioso que la ciencia aún es incapaz de responder. Por suerte, siempre nos lo podemos comer.",
+    "extra":{"disp": "pano"}
+  }
+]

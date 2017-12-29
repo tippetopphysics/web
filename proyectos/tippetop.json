@@ -1,0 +1,39 @@
+[
+  {
+    "name": "Errores, Eratóstenes y Viceversa",
+    "tipo": "youtube",
+    "id": "uRQ01RiKJYA",
+    "desc": "En pleno siglo XXI hay peña que todavía duda que la Tierra sea redonda. Eratóstenes lo calculó con una miaja de geometría hace 2000 años. Resumen: Eratóstenes es bastante puto amo. Además, hablamos sobre qué hacemos cuando hay errores a la hora de medir.",
+    "extra": {"disp": "pano"}
+  },{
+    "name": "ANTARES - Cazaneutrinos",
+    "tipo": "youtube",
+    "id": "PFoUF4jl07s",
+    "desc": "NEUTRINOS: ¿Qué son? ¿Por qué nos empeñamos en detectarlos? Este vídeo lo hicimos para el VI concurso de divulgación CPAN. No ganamos, pero ¿y lo bien que nos lo pasamos haciéndolo?",
+    "extra": {"disp": "pano"}
+  },{
+    "name": "<span class='fa fa-music'></span>Relatividad<span class='fa fa-music'></span>",
+    "tipo": "youtube",
+    "id": "ffX3uFBphmE",
+    "desc": "Aprovechamos el 100º aniversario de la confirmación experimental de la Relatividad General de Einstein para cantar un ratico a ritmo de La Oreja de Van Gogh, ¡y de paso explicar algo de cencia!",
+    "extra": {"disp": "pano"}
+  },{
+    "name": "Física de la Cocina",
+    "tipo": "youtube",
+    "id": "VUlu2SgNYRI",
+    "desc": "¿Cómo funciona una olla exprés? ¿Y una nevera? ¿Y un microondas? En nuestro último para el concurso ESTIC 2013/14 nos metemos en la cocina para investigar cómo funcionan esos aparatejos.",
+    "extra": {"disp": "pano"}
+  },{
+    "name":"Momento Lineal",
+    "tipo":"youtube",
+    "id":"V44hpwIX8vk",
+    "desc":"A todes nos hace mucha más gracia que nos atropelle una mosca que que nos atropelle un tren, pero ¿por qué? Pues por la conservación del momento lineal. Dedícale un momento a este vídeo y échale un vistazo.",
+    "extra":{"disp": "pano"}
+  },{
+    "name":"Efecto Doppler",
+    "tipo":"youtube",
+    "id":"OxtH4o8KlcY",
+    "desc":"¡Nuestro primer vídeo! ¡Mira que éramos jóveneees! Madre mía cómo pasa el tiempo. Te explicamos qué tienen que ver las ambulancias con la expansión del universo, y no, no es una pregunta retórica.",
+    "extra":{"disp": "pano"}
+  }
+]

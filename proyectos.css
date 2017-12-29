@@ -17,6 +17,7 @@
   margin: 1vw;
   float: left;
   display: block;
+  position: relative;
 }
 
 .tablement .placeholder{
@@ -32,6 +33,7 @@
 
 .tablement .desc{
   padding: 10px 20px;
+  padding-bottom: 30px;
 }
 
 .tablement h2{
@@ -71,4 +73,132 @@
   color: #323232;
   font-size: 10em;
   margin: 0px;
+}
+
+.deco {
+  width: 100%;
+  height: 7px;
+  position: absolute;
+  bottom: 0px;
+  background-color: #70DBF4;
+}
+
+.tablement:hover .deco{
+  background-color: #DB2955;
+  height: 15px;
+}
+
+/** PARA IFRAMES I TAL **/
+#tve {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+}
+
+/** PARA ARTÍCULOS Y ESAS COSAS **/
+#transcript, #original {
+  overflow-y: auto;
+  height: 85%;
+}
+
+#warnung h1 {
+  font-family: "Open Sans Condensed", sans-serif;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  color: #646464;
+
+}
+
+#warnung h2 {
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #a0a0a0;
+  margin-top: 0px;
+  font-size: 1.2em;
+}
+
+#warnung h2:hover{
+  background-color: #a0a0a0;
+  color: white;
+}
+
+#transcript > h1{
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #323232;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 2.5em;
+}
+
+#transcript > h2{
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #808080;
+  letter-spacing: 0.07vw;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+
+#transcript > h3{
+  font-family: "Open Sans", sans-serif;
+  color: #dd3232;
+  display: inline;
+  margin-top: 0px;
+  font-size: 1em;
+  text-decoration: underline;
+}
+
+#transcript > h4{
+  font-family: "Open Sans", sans-serif;
+  color: #b0b0b0;
+  display: inline;
+  margin-top: 0px;
+  margin-left: 10px;
+  font-size: 1em;
+}
+
+#transcript p {
+  font-family: "Open Sans", sans-serif;
+  color: #323232;
+  text-align: justify;
+  font-size: 1em;
+  margin-right: 20px;
+}
+
+#transcript > .transcimg{
+  width: 40%;
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  position: relative;
+  top: 2em;
+  margin-right: 20px;
+}
+
+#transcript > .transcimg > img{
+  width: 100%;
+  position: relative;
+  top: 1em;
+}
+
+#transcript > .transcimg > p {
+  text-align: right;
+  color: #808080;
+  margin-bottom: 0px;
+  margin-right: 0px;
+}
+
+#transcript > p {
+  text-indent: 2em;
+}
+
+#transcript p > a:link{
+  color: #0D6F70;
+  font-weight: 700;
+}
+
+#transcript p > a:visited, #transcript p > a:hover{
+  color: hotpink;
 }

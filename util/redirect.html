@@ -1,0 +1,20 @@
+<head>
+  <title> La vida es una tómbola tom tom tómbola</title>
+</head>
+<body style="background-color: white; padding: 30px;">
+  <p style="color: #323232; font-size: 0.5em">
+    Si estás leyendo esto, ¡es que eres guay! ¡Enhorabuena! Pulsa Ctrl+R para recoger tu recompensa.
+  </p>
+  <script>
+    function getParameterByName(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+    window.location = getParameterByName("where");
+  </script>
+</body>
