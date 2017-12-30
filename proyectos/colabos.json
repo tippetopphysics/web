@@ -2,7 +2,7 @@
   {
     "name": "Órbita Laika 46: Sara Escudero - Orden",
     "tipo": "tve",
-    "id": "4361638",
+    "id": "http://www.rtve.es/alacarta/videos/orbita-laika/orbita-laika-sara-escudero-orden/4361638/",
     "desc": "¡Nuestro Arcadi sale en un programa de Órbita Laika! ¡En la tele! Sólo cinco minutitos, ¡pero qué cinco minutitos!",
     "extra": {"disp": "pano"},
     "when": "December 10, 2017"
@@ -23,12 +23,9 @@
   },{
     "name": "Scenio Bilbao 2017: Sesión Youtuber",
     "tipo": "eitb",
-    "id": "5086550",
+    "id": "http://www.eitb.eus/es/divulgacion/bizkaia-zientzia-plaza/videos/detalle/5086550/video-bizkaia-zientzia-plaza-scencio-bilbao-sesion-youtuber-/",
     "desc": "Scenio Bilbao 2017 fue el primer gran evento de nuevos formatos divulgativos en español, y nuestro Arcadi fue a representar a Tippe Top participando en un par de actividades en la sesión youtuber. ¡A disfrutar!",
-    "extra": {
-      "disp": "pano",
-      "clico": "<iframe style='width:100%;height:100%' scrolling='no' src='http://www.eitb.eus/es/get/multimedia/screenview/id/5086550/tipo/videos/' frameBorder='0' allowfullscreen></iframe>"
-    },
+    "extra": {"disp": "pano"},
     "when": "September 17, 2017"
   },{
     "name": "¿Sabes más Física que un estudiante de MIR? feat. Psiqetal",

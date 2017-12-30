@@ -36,40 +36,8 @@ function ProjectElement(proyectus, clase){
         break;
 
       case "tve":
-        w = 70;
-        h = (9/16.0)*w;
-        res.css({"width": w +"vw","height": h +"vw"});
-        var daddy = $("<div style='width:100%;padding-top:64%;position:relative;border-bottom:1px solid #aaa;display:inline-block;background:none;'></div>");
-        var repro = $('<iframe></iframe>');
-        repro.attr({
-          "id": this.tipo,
-          "name": this.name,
-          "scrolling": "no",
-          "allowfullscreen": "true",
-          "src": "util/redirect.html?where="+"http://www.rtve.es/drmn/embed/video/"+ this.id,
-          "frameborder": "0"
-        });
-
-        daddy.append(repro);
-        console.log(daddy);
-        res.append(daddy);
-        break;
-
       case "eitb":
-        w = 70;
-        h = (44/70.0)*w;
-        res.css({"width": w +"vw","height": h +"vw"});
-        var repro = $('<iframe></iframe>');
-        repro.attr({
-          "id": this.tipo,
-          "width": "100%",
-          "height": "100%",
-          "scrolling": "no",
-          "frameBorder": "0",
-          "allowfullscreen": "true",
-          "src": "util/redirect.html?"+"where=http://www.eitb.eus/es/get/multimedia/screenview/id/"+ this.id + "/tipo/videos/"
-        });
-        res.append(repro);
+
         break;
 
       case "prensa":
@@ -247,28 +215,36 @@ function ProjectElement(proyectus, clase){
 
     ildivo.click(function(){
       //Creem ara un div mazo gran
-      var fondo = $("<div class='fondukus'></div>");
-      var backdrop = $("<div class='backdrop'></div>");
-      var cosika = proyo.doClicks();
-      backdrop.append(cosika);
+      switch (proyo.tipo) {
+        case "tve":
+        case "eitb":
+          var win = window.open(proyo.id, '_blank');
+          break;
+        default:
+          var fondo = $("<div class='fondukus'></div>");
+          var backdrop = $("<div class='backdrop'></div>");
+          var cosika = proyo.doClicks();
+          backdrop.append(cosika);
 
-      backdrop.click(function(e){
-        var target = $(e.target);
-        var papis = target.parents();
-        var hideme = true;
-        for(i in papis){
-          if(papis.eq(i).attr("id")=="inda"){
-            hideme = false;
-          }
-        }
-        if(hideme){
-          $(this).hide(500,function(){
-            $(this).remove();
+          backdrop.click(function(e){
+            var target = $(e.target);
+            var papis = target.parents();
+            var hideme = true;
+            for(i in papis){
+              if(papis.eq(i).attr("id")=="inda"){
+                hideme = false;
+              }
+            }
+            if(hideme){
+              $(this).hide(500,function(){
+                $(this).remove();
+              });
+            }
           });
-        }
-      });
-      $("BODY").append(backdrop);
-      backdrop.show(500);
+          $("BODY").append(backdrop);
+          backdrop.show(500);
+      }
+
     })
   }
 }
