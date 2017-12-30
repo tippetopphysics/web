@@ -1,11 +1,13 @@
 // LLISTA DE PROJECTES I TAL
-function ProjectElement(proyectus){
+function ProjectElement(proyectus, clase){
   this.name = proyectus.name;
   this.tipo = proyectus.tipo;
   this.id = proyectus.id;
   this.desc = proyectus.desc;
   this.extra = proyectus.extra;
   this.banner = proyectus.banner;
+  this.clase = clase;
+  this.when = proyectus.when;
 
   //Crea el div per a quan es clica en el div de la web
   this.doClicks = function() {
@@ -187,7 +189,7 @@ function ProjectElement(proyectus){
   }
 
   //Crea el div per a la web
-  this.creaDiv = function() {
+  this.creaDiv = function(modo) {
     var proyo = this;
     var ildivo = $("<div class='tablement'></div>");
     var baneo;
@@ -218,7 +220,26 @@ function ProjectElement(proyectus){
     ladesc.append("<h2>"+this.name+"</h2>");
     ladesc.append("<p>"+this.desc+"</p>");
 
-    var barra = $("<div class='deco'></div>");
+    var stilus = "";
+    switch (modo) {
+      case "tutti":
+        switch (this.clase) {
+          case "tippetop":
+            stilus = "#F24E4E";
+            break;
+          case "gastrofisica":
+            stilus = "#F78145";
+            break;
+          case "colabos":
+            stilus = "#11644D";
+            break;
+        }
+        stilus = "style='background-color:" + stilus + "'";
+        break;
+      default:
+        stilus = "";
+    }
+    var barra = $("<div "+stilus+" class='deco'></div>");
 
     ildivo.append(ladesc);
     ildivo.append(barra);
@@ -253,11 +274,44 @@ function ProjectElement(proyectus){
 }
 
 function loadProjects(pagina){
-  $.getJSON("proyectos/"+pagina+".json", function(data){
-    for(i in data){
-      var ele = new ProjectElement(data[i]);
-      ele.creaDiv();
-    }
-    responsiveProjects();
-  });
+  if(pagina=="tutti"){
+    $.getJSON("proyectos/tippetop.json", function(data){
+      var videos = [];
+      for(i in data){
+        var ele = new ProjectElement(data[i],"tippetop");
+        videos.push(ele);
+      }
+      $.getJSON("proyectos/gastrofisica.json", function(data){
+
+        for(i in data){
+          var ele = new ProjectElement(data[i],"gastrofisica");
+          videos.push(ele);
+        }
+        $.getJSON("proyectos/colabos.json", function(data){
+          for(i in data){
+            var ele = new ProjectElement(data[i],"colabos");
+            videos.push(ele);
+          }
+          videos.sort(function(a,b){
+            var d1 = new Date(a.when);
+            var d2 = new Date(b.when);
+
+            return d2.getTime()-d1.getTime();
+          });
+          for(i in videos){
+            videos[i].creaDiv("tutti");
+          }
+          responsiveProjects();
+        });
+      });
+    });
+  }else{
+    $.getJSON("proyectos/"+pagina+".json", function(data){
+      for(i in data){
+        var ele = new ProjectElement(data[i],pagina);
+        ele.creaDiv();
+      }
+      responsiveProjects();
+    });
+  }
 }
