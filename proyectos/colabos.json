@@ -4,19 +4,22 @@
     "tipo": "tve",
     "id": "4361638",
     "desc": "¡Nuestro Arcadi sale en un programa de Órbita Laika! ¡En la tele! Sólo cinco minutitos, ¡pero qué cinco minutitos!",
-    "extra": {"disp": "pano"}
+    "extra": {"disp": "pano"},
+    "when": "December 10, 2017"
   },{
     "name": "Órbita Laika - Science Truck con Sarah Nichols",
     "tipo": "youtube",
     "id": "oXzUwhBpsG8",
     "desc": "La entrevista completa que le hizo la siempre espléndida Sarah Nichols a nuestro Arcadi en Órbita Laika. ¡20 minutos de CENCIA y tonterías!",
-    "extra": {"disp": "pano"}
+    "extra": {"disp": "pano"},
+    "when": "December 10, 2017"
   },{
     "name": "PIMPCIPIO INACTIVO - #homeopatia",
     "tipo": "youtube",
     "id": "mlvj7C9f-Ls",
     "desc": "El MARAVILLOSO Y SEXI <a href='https://www.youtube.com/channel/UCd3RNj3Rb6hpVDbG_L9YZ3g' target='_blank'>El Físico Barbudo</a> ha creado esta MASTERPIS de trap homeopático, con el cameo de gente EXTUPENDA, incluyendo nuestro propio Arcadi.",
-    "extra": {"disp": "pano"}
+    "extra": {"disp": "pano"},
+    "when": "October 2, 2017"
   },{
     "name": "Scenio Bilbao 2017: Sesión Youtuber",
     "tipo": "eitb",
@@ -25,25 +28,29 @@
     "extra": {
       "disp": "pano",
       "clico": "<iframe style='width:100%;height:100%' scrolling='no' src='http://www.eitb.eus/es/get/multimedia/screenview/id/5086550/tipo/videos/' frameBorder='0' allowfullscreen></iframe>"
-    }
+    },
+    "when": "September 17, 2017"
   },{
     "name": "¿Sabes más Física que un estudiante de MIR? feat. Psiqetal",
     "tipo": "youtube",
     "id": "IuvYUPqAm5Q",
     "desc": "Tras el test al que Dani Orts (<a href='https://www.youtube.com/channel/UCbEAy9mnH2YReAHR0SLdJ0Q' target='_blank'>Psiquiatría et al.</a>) sometió a Arcadi en su canal, tocaba reciprocar, y sometimos a Dani a nuestro propio test físico para comprobar cuánto sabía de Física.",
-    "extra": {"disp": "pano"}
+    "extra": {"disp": "pano"},
+    "when": "September 21, 2016"
   },{
     "name": "¡Test Cruzado! ¿Cuánto sabe de Psiquiatría un Físico? ft. Arcadi",
     "tipo": "youtube",
     "id": "XWJz3fDWyUg",
     "desc": "Nuestro Arcadi se somete a un test para comprobar cuánto sabe de Psiquiatría en el canal <a href='https://www.youtube.com/channel/UCbEAy9mnH2YReAHR0SLdJ0Q' target='_blank'>Psiquiatría et al.</a>, con <s>eróticos</s> sorprendentes resultados.",
-    "extra": {"disp": "pano"}
+    "extra": {"disp": "pano"},
+    "when": "September 21, 2016"
   },{
     "name": "¿Qué es la Ciencia? | Especial 10K - Wikiseba",
     "tipo": "youtube",
     "id": "Gf8RNYQGwwA",
     "desc": "Para celebrar sus primeros 10 000 suscriptores, <a href='https://www.youtube.com/channel/UCMHnQF1RBsv3zapgSShwkdg' target='_blank'>Wikiseba</a> preparó una MEGACOLABORACIÓN de youtubers de ciencia para preguntarnos: ¿Qué es la ciencia? <s>, dices mientras clavas en mi pupila tu pupila azul</s>. ¡Y entre esos youtubers andábamos nosotros!",
-    "extra": {"disp": "pano"}
+    "extra": {"disp": "pano"},
+    "when": "May 9, 2016"
   },{
     "name": "Artículo sobre Tippe Top en <i>El Periódico de Aquí</i>",
     "tipo": "prensa",
@@ -60,6 +67,7 @@
       "texto": "El mundo de la Física es muy complicado para muchos, por no decir imposible de entender. Siempre tenemos algún que otro concepto más o menos claro, pero nunca sabemos a ciencia cierta de qué manera se aplica o qué extraña teoría podría explicar. Pero lo que tal vez la mayoría desconozca es que la Física está presente en todas las parcelas de nuestra vida. Cuando circulamos a 120 km/h por una autopista, la velocidad a la que conducimos, la fuerza del viento y unos cuantos elementos más, si los metiésemos todos en una complicada fórmula matemática, seguramente adiviniaríamos a qué hora exacta llegaríamos a nuestro destino. Como hemos dicho antes, todos estos conceptos nos resultan tan complicados que las fuerzas centrífugas, centrípetas y demás las dejamos olvidadas en el cajón de la memoria para no usarlas jamás. Afortunadamente, no todos somos iguales y siempre hay, como en todos los sectores, un grupo de apasionados que sí quieren desvelar los secretos más enigmáticos del universo para hacernos la vida más fácil a los demás.\nY aquí es donde entran los Tippe Top Physics. Josep Gallego, un estudiante de Física, natural de Llíria de 20 años, pertenece a un grupo que se encarga de explicar, de manera práctica y sencilla y mediante vídeos de YouTube, al resto de mortales, muchas de las teorías físicas que se estudian en primero de carrera. Pero Josep no está solo en esta aventura. Le acompañan Miriam Cantos, Arcadi Garcia, Miguel Peidró, Nuria Pérez, Silvia Pla, Victoria Sánchez bajo la supervisión de los profesores, Chantal Ferrer, Toni Font y Enric Valor, nieto del afamado escritor.\nLos Tippe Top Physics pertenecen al Programa de Innovación Educativa de la Universitat de València y recrean diversas teorías que enseñan sobre todo a jóvenes y adolescentes cómo funciona la Física de los primeros años de carrera. Ya tienen publicados un par de vídeos en su canal de YouTube (<a href='http://videos.tippetop.es' target='_blank'>Tippe Top Physics</a>) en los que explican, entre otras historias, el Efecto Doppler, que es el aparente cambio de frecuencia de una onda producida por el movimiento relativo de la fuente respecto a su observador, o el Momento Líneal que no es otra teoría que la que explica por qué vuela un cohete, entre otras. Los Tippe Top Physics ya están preparando el tercero de los vídeos y que hablará de la Termodinámica de la cocina porque, a la hora de preparar un sencillo y simple plato de lentejas lo que relamente se está produciendo dentro de la olla es un conjunto de teorías desconocidas para nosotros. Por eso la importancia de ver, en internet, las explicaciones de los Tippe Top Physics, para enterarnos de lo que pasa a nuestro alrededor y podamos saber en qué acciones cotidianas, sin darnos cuenta, aplicamos la Física.",
       "imatges": ["imgs/article2014.jpg"],
       "peus": ["Algunos de los Tippe Top Physics. //EPDA"]
-    }
+    },
+    "when": "July 18, 2014"
   }
 ]
