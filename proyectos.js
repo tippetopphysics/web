@@ -39,10 +39,17 @@ function responsiveProjects(){
 
   //Ja que estem, reposicionem l'engranatge del próximamente:
   var wid = $("#prox span").width();
+  var h = $("#prox .desc").height();
+  h = (maxis-h)/2;
   wid = (w0-wid)/2;
   $("#prox span").css({
     "margin-left": wid + "px",
     "margin-right": wid + "px"
+  });
+
+  $("#prox .desc").css({
+    "margin-top": h + "px",
+    "margin-bottom": h + "px"
   });
 }
 
