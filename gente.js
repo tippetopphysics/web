@@ -1,26 +1,6 @@
-/* SCROLLBAR */
-
-$("#members").mCustomScrollbar({
-  scrollbarPosition: "outside",
-  scrollInertia: 250,
-  mouseWheel: {enable: true},
-  contentTouchScroll: 0,
-  documentTouchScroll: true,
-  scrollButtons: {
-    enable: true,
-    scrollType: "stepped",
-    scrollAmount: 300
-  },
-  keyboard: {
-    enable: true,
-    scrollType: "stepped",
-    scrollAmount: 300
-  }
-});
-
 /* COLORS DE LA PENYA I TAL */
 var penya = ["mimi","jojo","andrea","arcadi","patri"];
-for(var i=0; i<penya.length; i++){
+for(i in penya){
   var st = penya[i];
   $("#"+st).css({
     "background-color": "var(--"+st+"-bg)"
@@ -42,3 +22,25 @@ for(var i=0; i<penya.length; i++){
     "color": "var(--"+st+"-text3)"
   });
 }
+
+/* JA QUE ESTEM, fem que les descripcions tinguen totes la mateixa mida */
+var tutti = $(".miembro .desc");
+var maxis = 0;
+for(i=0; i<tutti.length; i++){
+  var desco = tutti.eq(i);
+  var siz = desco.css("height");
+  siz = parseInt(siz.slice(0,siz.length-2));
+
+  if (siz > maxis){
+    maxis = siz;
+  }
+}
+
+for(i in tutti){
+  tutti.eq(i).css("height",maxis.toString()+"px");
+}
+
+/* clicks */
+$("#members").click(function(e){
+  console.log(e.target);
+});

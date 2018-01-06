@@ -28,7 +28,7 @@ function responsiveProjects(){
     for(var j=0; j<fila.length; j++){
       var elem = fila.eq(j);
       if(elem.height()>maxis){
-        maxis = elem.height();
+        maxis = elem.get(0).scrollHeight;
       }
     }
     for(var j=0; j<fila.length; j++){

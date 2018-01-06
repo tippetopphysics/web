@@ -5,13 +5,18 @@
   white-space: normal;
   vertical-align: top;
 
-  width: 400px;
+  width: var(--member-width);
   height: 800px;
   padding: 10px;
 
   margin: 0.5vw;
+  margin-bottom: 20px;
   border-radius: 0.5vw;
   box-shadow: 0px 7px 16px rgba(50,50,50,0.5);
+  position: relative;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
 }
 
 .miembro h1{
@@ -77,11 +82,12 @@
 
 /* COLORS DE LA PENYA */
 :root {
+    --member-width: 400px;
     --mimi-bg: OliveDrab;
-    --mimi-bg2: rgba(232,252,207,0.5);
-    --mimi-text1: #3d0814;
-    --mimi-text2: #134611;
-    --mimi-text3: #3d0814;
+    --mimi-bg2: rgba(212,238,159,0.5);
+    --mimi-text1: #260339;
+    --mimi-text2: #550000;
+    --mimi-text3: #352700;
 
     --jojo-bg: LightSkyBlue;
     --jojo-bg2: rgba(47,19,30,0.5);

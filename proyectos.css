@@ -18,12 +18,18 @@
   float: left;
   display: block;
   position: relative;
+  object-fit: contain;
 }
 
 .tablement .placeholder{
   width: 100%;
   margin: 0px;
   height: 200px;
+}
+
+.tablement > a > img {
+  width: 100%;
+  margin: 0px;
 }
 
 .tablement:hover, #prox:hover{
