@@ -15,4 +15,5 @@ function responsiveNavbar() {
   //posicionar la resta de la pàgina
   h = $("#navul")[0].getBoundingClientRect().height;
   $("#cont").css({"top": h-2*pa + "px"});
+  $(".splashtext").css("top","0px");
 }

@@ -144,3 +144,34 @@ span {
   margin: auto;
   box-shadow: 0px 0px 20px black;
 }
+
+/* PÀGINA INICIAL */
+#cont.splashtext{
+  width: 50vw;
+  overflow: auto;
+  box-shadow: -5px 0px 10px rgba(0,0,0,0.3) inset;
+  height: 100vh;
+}
+
+#textum{
+  overflow-y: auto;
+}
+
+#splashimg{
+  width: 50vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 0;
+  right: 0px;
+  background-color: hotpink;
+  top: 0px;
+  overflow: hidden;
+
+  background-image: url('imgs/article2014.jpg');
+  background-repeat:no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  background-position:center center;
+}
