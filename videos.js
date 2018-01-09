@@ -168,7 +168,7 @@ function ProjectElement(proyectus, clase){
         case "youtube":
           baneo = $("<img class='projban'>");
           baneo.attr({
-            "src": "http://i3.ytimg.com/vi/"+this.id+"/maxresdefault.jpg",
+            "src": "https://i3.ytimg.com/vi/"+this.id+"/maxresdefault.jpg",
             "width": "100%"
           });
           break;
