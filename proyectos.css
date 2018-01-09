@@ -27,7 +27,7 @@
   height: 200px;
 }
 
-.tablement > a > img {
+.tablement > a > img, .tablement > img {
   width: 100%;
   margin: 0px;
 }
