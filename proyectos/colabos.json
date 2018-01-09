@@ -5,7 +5,8 @@
     "id": "http://www.rtve.es/alacarta/videos/orbita-laika/orbita-laika-sara-escudero-orden/4361638/",
     "desc": "¡Nuestro Arcadi sale en un programa de Órbita Laika! ¡En la tele! Sólo cinco minutitos, ¡pero qué cinco minutitos!",
     "extra": {"disp": "pano"},
-    "when": "December 10, 2017"
+    "when": "December 10, 2017",
+    "banner": "imgs/laika.png"
   },{
     "name": "Órbita Laika - Science Truck con Sarah Nichols",
     "tipo": "youtube",
