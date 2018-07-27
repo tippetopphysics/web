@@ -1,5 +1,12 @@
 [
   {
+    "name":"La física de una clara de huevo",
+    "tipo": "youtube",
+    "id": "zBgc8oFTVdo",
+    "desc": "La física mola un huevo. Y la cocina hay que tocarla para creerla. En este vídeo de Gastrofísica, le echamos un vistazo a la física tras el punto de nieve, que no es poca.",
+    "extra":{"disp": "pano"},
+    "when": "June 19, 2018"
+  },{
     "name":"La óptica de una clara de huevo",
     "tipo": "youtube",
     "id": "PywBvGEIa8c",
