@@ -176,3 +176,9 @@ span {
   background-size:cover;
   background-position:center center;
 }
+
+.center {
+    display: block;
+    margin-left: calc(50vw - 960px);
+    margin-right: calc(50vw - 960px);
+}
